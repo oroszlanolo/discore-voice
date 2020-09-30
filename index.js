@@ -69,7 +69,7 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
         let chn = await client.channels.fetch(oldState.channelID);
         if (cache.channel) {
             cache.channel.send(`<@${usr.id}>  has left the ` + chn.name + " channel.");
-            cache.channel.send("Emberek száma: " + current[oldState.channelID]);
+            // cache.channel.send("Emberek száma: " + current[oldState.channelID]);
         }
     }
 
@@ -83,7 +83,7 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
         current[newState.channelID]++;
         if (cache.channel) {
             cache.channel.send(`<@${usr.id}>  has joined the ` + chn.name + " channel.");
-            cache.channel.send("Emberek száma: " + current[newState.channelID]);
+            // cache.channel.send("Emberek száma: " + current[newState.channelID]);
         }
     }
 });
