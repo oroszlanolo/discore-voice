@@ -21,9 +21,11 @@ function loadCache() {
 client.once('ready', () => {
     console.log('Ready!');
     loadCache();
-    client.channels.fetch(cache.channel.id)
-        .then(ch => cache.channel = ch)
-        .catch(console.error);
+    if (cache.channel) {
+        client.channels.fetch(cache.channel.id)
+            .then(ch => cache.channel = ch)
+            .catch(console.error);
+    }
 });
 
 client.on('message', message => {
@@ -75,7 +77,7 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
         let chn = await client.channels.fetch(newState.channelID);
         if (!current[newState.channelID]) {
             current[newState.channelID] = 0;
-            cache.channel.send(`<@everyone>, <@${usr.id}> is the first to join the` + chn.name + " channel.");
+            cache.channel.send(`@everyone, <@${usr.id}> is the first to join the ` + chn.name + " channel.");
         }
 
         current[newState.channelID]++;

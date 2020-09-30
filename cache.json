@@ -1,21 +1,3 @@
 {
-    "setup": true,
-    "channel": {
-        "type": "text",
-        "deleted": false,
-        "id": "760842382093713408",
-        "name": "area51-for-bb",
-        "rawPosition": 9,
-        "parentID": "682341863176405030",
-        "permissionOverwrites": [],
-        "topic": null,
-        "nsfw": false,
-        "lastMessageID": "760960401830576218",
-        "rateLimitPerUser": 0,
-        "lastPinTimestamp": null,
-        "guild": "682341863176405020",
-        "messages": ["760960401830576218"],
-        "createdTimestamp": 1601469359659
-    },
-    "voiceChannel": "682341863176405081"
+    "setup": false
 }
