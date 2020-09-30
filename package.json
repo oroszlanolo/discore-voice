@@ -1,0 +1,11 @@
+{
+  "name": "discore-voice",
+  "version": "1.0.0",
+  "description": "Sends notification about someone joining a voice channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
